@@ -3,9 +3,8 @@
   "type": "module",
   "version": "0.0.0-development",
   "scripts": {
-    "test": "jest --coverage --only-changed=false",
-    "test:fails": "jest --coverage --only-changed=false --only-failures",
-    "test:changed": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:commonjs": "jest --coverage --only-changed=false"
   },
   "private": false,
   "devDependencies": {

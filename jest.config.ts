@@ -3,7 +3,7 @@ import type { Config } from "@jest/types";
 let config: Config.InitialOptions = {
   rootDir: __dirname,
   // use 'ts-jest' to enable type checking while testing
-  preset: "ts-jest",
+  // preset: "ts-jest",
   testEnvironment: "node",
   injectGlobals: true,
   onlyChanged: false,
@@ -19,9 +19,13 @@ let config: Config.InitialOptions = {
     "scss",
     "css",
     "node",
+    "mjs",
+    "cjs",
+    "mts",
+    "cts",
   ],
   transform: {
-    "^.+\\.(t|j)sx?$": "ts-jest",
+    // "^.+\\.(t|j)sx?$": "ts-jest",
   },
 
   modulePathIgnorePatterns: ["dist"],
