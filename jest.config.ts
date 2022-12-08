@@ -2,8 +2,10 @@ import type { Config } from "@jest/types";
 
 let config: Config.InitialOptions = {
   rootDir: __dirname,
-  // use 'ts-jest' to enable type checking while testing
-  // preset: "ts-jest",
+  // use 'ts-jest' or 'ts-jest/presets/*' to enable type checking while testing
+  // https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/
+  preset: "ts-jest/presets/default-esm",
+  extensionsToTreatAsEsm: [".ts"],
   testEnvironment: "node",
   injectGlobals: true,
   onlyChanged: false,
@@ -25,7 +27,7 @@ let config: Config.InitialOptions = {
     "cts",
   ],
   transform: {
-    // "^.+\\.(t|j)sx?$": "ts-jest",
+    "^.+\\.(t|j)sx?$": ["ts-jest", { useESM: true }],
   },
 
   modulePathIgnorePatterns: ["dist"],
