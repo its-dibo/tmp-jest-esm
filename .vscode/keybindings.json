@@ -1,0 +1,13 @@
+[
+  {
+    // duplicate selection
+    "key": "ctrl+d",
+    "command": "editor.action.duplicateSelection"
+  },
+  {
+    // select the next similar
+    // to select all semialr : ctr+shift+L
+    "key": "alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch"
+  }
+]
